@@ -171,7 +171,7 @@ function selectAnswer(answer) {
 
 function submitAnswer(category) {
     if (currentAnswer === category[counter].answer) {
-        var score = $("#score").text();
+        var score = parseInt($("#score").text());
         score = score + 2;
         $("#score").text(score);
         
