@@ -144,6 +144,7 @@ function getQuestions(category) {
     counter = 0;
     currentCategory = category;
     currentAnswer = null;
+    $("#choices").empty();
     getQuestion(category, counter);
 }
 
@@ -170,7 +171,7 @@ function selectAnswer(answer) {
 
 function submitAnswer(category) {
     if (currentAnswer === category[counter].answer) {
-        var score = $("#score").val();
+        var score = $("#score").text();
         score = score + 2;
         $("#score").text(score);
         
