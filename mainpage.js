@@ -128,7 +128,7 @@ var immigration = [
 var educationalInequality = [
     {
         question: "Is public school a better option for academic diversity?",
-        choices: ["Yes", "No",],
+        choices: ["Yes", "No"],
         answer: "No",
     }
     
@@ -150,6 +150,7 @@ function getQuestions(category) {
 
 function getQuestion(category, i) {
     var question = category[i].question;
+
     $("#question").text(question);
 
     var choices = category[i].choices;
