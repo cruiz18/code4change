@@ -143,6 +143,7 @@ var currentAnswer = null;
 function getQuestions(category) {
     counter = 0;
     currentCategory = category;
+    currentAnswer = null;
     getQuestion(category, counter);
 }
 
@@ -169,6 +170,10 @@ function selectAnswer(answer) {
 
 function submitAnswer(category) {
     if (currentAnswer === category[counter].answer) {
+        var score = $("#score").val();
+        score = score + 2;
+        $("#score").text(score);
+        
         counter++;
         $("#choices").empty();
         getQuestion(category, counter);
@@ -249,5 +254,7 @@ function sendMessage(){
         var text = $("#Textarea").val();
         var randomUser = Math.floor(users.length * Math.random());
         $("#feed").append("<p>" + users[randomUser] + " " +  text + "</p>");
+        alert("Thank you for your positive message, our fellow lovely.")
+
     });
 }

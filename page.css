@@ -79,21 +79,31 @@ body{
     font-size: 35px;
 }
 #counter {
-	
+	position: absolute;
+    padding: 5px;
+    right: 0;
+    bottom: 0;
+    color: white;
 }
 
 button {
     color: black;
 }
 
-li {
+#choices li {
     border: 1px solid white;
 }
 
-li.selected {
+#choices li.selected {
     background: orange;
 }
 
-li.selected.wrong {
+#choices li.selected.wrong {
     background: red;
+}
+
+.counter {
+    position: absolute;
+    right: 0;
+    top: 0;
 }
